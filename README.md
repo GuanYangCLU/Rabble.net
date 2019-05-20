@@ -9,3 +9,8 @@ To use backend config:
   "githubSecret": "YOUR GITHUB SECRET"
 }
 ```
+
+To Run Server Concurrently, use command:
+```
+npm run dev
+```
