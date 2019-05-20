@@ -2,7 +2,6 @@
 To use backend config:
   In config folder, create default.json file, add these info:
 ```
-
 {
   "mongoURI": "YOUR MONGO URI",
   "jwtSecret": "secret",
