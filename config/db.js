@@ -1,17 +1,9 @@
 const mongoose = require('mongoose');
-const config = require('config');
-//const db = config.get('mongoURI');
-
-const db = {
-  mongoURI: process.env.MONGO_URI,
-  jwtSecret: process.env.JWT_SECRET,
-  githubClientId: process.env.GITHUB_CLIENT_ID,
-  githubSecret: process.env.GITHUB_SECRET
-};
+const config = require('./config');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(db.mongoURI, {
+    await mongoose.connect(config.mongoURI, {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false
