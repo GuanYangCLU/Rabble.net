@@ -6,6 +6,9 @@ const jwt = require('jsonwebtoken');
 const config = require('../../config/config');
 // const config = require('config');
 const { check, validationResult } = require('express-validator/check');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const User = require('../../models/User');
 
