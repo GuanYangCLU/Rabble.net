@@ -1,6 +1,13 @@
 const mongoose = require('mongoose');
 const config = require('config');
-const db = config.get('mongoURI');
+//const db = config.get('mongoURI');
+
+const db = {
+  "mongoURI": process.env.MONGO_URI,
+  "jwtSecret": process.env.JWT_SECRET,
+  "githubClientId": process.env.GITHUB_CLIENT_ID,
+  "githubSecret": process.env.GITHUB_SECRET
+}
 
 const connectDB = async () => {
   try {
