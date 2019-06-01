@@ -8,7 +8,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to='/profiles'>Car Members</Link>
+        <Link to='/profiles'>Rabble Members</Link>
       </li>
       <li>
         <Link to='/posts'>Posts</Link>
@@ -31,7 +31,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <ul>
       <li>
-        <Link to='/profiles'>Car Members</Link>
+        <Link to='/profiles'>Rabble Members</Link>
       </li>
       <li>
         <Link to='/register'>Register</Link>
@@ -45,8 +45,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   return (
     <nav className='navbar bg-dark'>
       <h1>
-        <Link to='/index'>
-          <i className='fas fa-code' /> Cars
+        <Link to='/'>
+          {/* /index */}
+          <i className='fas fa-fist-raised' /> Rabble
         </Link>
       </h1>
       {!loading && (
