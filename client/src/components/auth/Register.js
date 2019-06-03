@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
 import PropTypes from 'prop-types';
+import { createBrowserHistory } from 'history';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -19,12 +20,14 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   // handle onChange error(cannot modify text in input)
 
+  const history = createBrowserHistory(); //let submit jump to root
   const onSubmit = async e => {
     e.preventDefault();
     if (password !== password2) {
       setAlert('Passwords do not match', 'danger');
     } else {
       register({ name, email, password });
+      history.push('/login'); // use history
     }
   };
 

@@ -15,10 +15,10 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
         <Spinner />
       ) : (
         <Fragment>
-          <h1 className='large text-primary'>Car Members</h1>
+          <h1 className='large text-primary'>Rabble Members</h1>
           <p className='lead'>
             <i className='fab fa-connectdevelop' />
-            Browse and connect with Car Members
+            Browse and connect with Rablle Members
           </p>
           <div className='profile'>
             {profiles.length > 0 ? (

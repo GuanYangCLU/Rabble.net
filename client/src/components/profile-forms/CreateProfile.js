@@ -54,30 +54,30 @@ const CreateProfile = ({ createProfile, history }) => {
       <form className='form' onSubmit={e => onSubmit(e)}>
         <div className='form-group'>
           <select name='status' value={status} onChange={e => onChange(e)}>
-            <option value='0'>* Select Professional Status</option>
-            <option value='Developer'>Developer</option>
-            <option value='Junior Developer'>Junior Developer</option>
-            <option value='Senior Developer'>Senior Developer</option>
+            <option value='0'>* Select your position</option>
+            <option value='Top'>Top</option>
+            <option value='Jungle'>Jungle</option>
+            <option value='Mid'>Mid</option>
+            <option value='Ad Carry'>Ad Carry</option>
+            <option value='Support'>Support</option>
+            <option value='Coach'>Coach</option>
+            <option value='Data Analyst'>Data Analyst</option>
+            <option value='Team Leader'>Team Leader</option>
             <option value='Manager'>Manager</option>
-            <option value='Student or Learning'>Student or Learning</option>
-            <option value='Instructor'>Instructor or Teacher</option>
-            <option value='Intern'>Intern</option>
             <option value='Other'>Other</option>
           </select>
-          <small className='form-text'>
-            Give us an idea of where you are at in your career
-          </small>
+          <small className='form-text'>Pick your most comfortable career</small>
         </div>
         <div className='form-group'>
           <input
             type='text'
-            placeholder='Company'
+            placeholder='Team'
             name='company'
             value={company}
             onChange={e => onChange(e)}
           />
           <small className='form-text'>
-            Could be your own company or one you work for
+            Could be your own team or one you work for
           </small>
         </div>
         <div className='form-group'>
@@ -89,7 +89,7 @@ const CreateProfile = ({ createProfile, history }) => {
             onChange={e => onChange(e)}
           />
           <small className='form-text'>
-            Could be your own or a company website
+            Could be your own or a team website
           </small>
         </div>
         <div className='form-group'>
@@ -107,26 +107,25 @@ const CreateProfile = ({ createProfile, history }) => {
         <div className='form-group'>
           <input
             type='text'
-            placeholder='* Skills'
+            placeholder='* Champions'
             name='skills'
             value={skills}
             onChange={e => onChange(e)}
           />
           <small className='form-text'>
-            Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
+            Please use comma separated values (eg. Ahri,Zed,Lee Sin,etc.)
           </small>
         </div>
         <div className='form-group'>
           <input
             type='text'
-            placeholder='Github Username'
+            placeholder='LOL Username'
             name='githubusername'
             value={githubusername}
             onChange={e => onChange(e)}
           />
           <small className='form-text'>
-            If you want your latest repos and a Github link, include your
-            username
+            If you want to show your reports, let us get your username
           </small>
         </div>
         <div className='form-group'>

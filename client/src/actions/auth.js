@@ -21,6 +21,8 @@ export const loadUser = () => async dispatch => {
 
   try {
     const res = await axios.get('/api/auth');
+
+    console.log('res', res);
     // dispatch is like actions return/response to redux store (reducer)
     dispatch({
       type: USER_LOADED,
